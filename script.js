@@ -12,9 +12,9 @@ function login() {
           if (response.success) {
               // Redirect to the appropriate page based on the role
               if (response.role === 'admin') {
-                  window.location.href = 'admin.php';
+                  window.location.href = 'dashboard.html';
               } else {
-                  window.location.href = 'employee.php';
+                  window.location.href = 'dashboard.html';
               }
           } else {
               alert('Login failed. Please check your username and password.');
