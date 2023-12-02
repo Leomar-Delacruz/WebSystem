@@ -15,7 +15,7 @@ function login() {
               if (response.role === 'admin') {
                   window.location.href = '/Admin_Dashboard/admin.html';
               } else {
-                  window.location.href = 'employee.php';
+                  window.location.href = '/Employee_Dashboard/Employee.html';
               }
           } else {
               // Display login failure message with smooth fade effect
