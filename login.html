@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login System</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Log in</title>
+    <style>
+   .login-failure-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -18,6 +34,9 @@
 
             <button type="button" onclick="login()">Login</button>
         </form>
+
+        <!-- Display login failure message in the center -->
+        <div id="loginFailureMessage" class="login-failure-message"></div>
     </div>
 
     <script src="script.js"></script>
