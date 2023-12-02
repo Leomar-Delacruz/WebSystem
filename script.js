@@ -14,9 +14,10 @@ function login() {
               if (response.role === 'admin') {
                   window.location.href = '/Admin_Dashboard/admin.html';
               } else {
-                  window.location.href = '/Employee_Dashboard/Employee.html';
+                  window.location.href = 'employee.php';
               }
           } else {
+              // Display an alert for login failure
               alert('Login failed. Please check your username and password.');
           }
       }
