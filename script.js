@@ -14,7 +14,7 @@ function login() {
               if (response.role === 'admin') {
                   window.location.href = 'dashboard.html';
               } else {
-                  window.location.href = 'dashboard.html';
+                  window.location.href = '/Employee_Dashboard/Employee.html';
               }
           } else {
               alert('Login failed. Please check your username and password.');
