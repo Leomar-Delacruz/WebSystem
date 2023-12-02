@@ -18,16 +18,14 @@ function login() {
                   window.location.href = '/Employee_Dashboard/Employee.html';
               }
           } else {
-              // Display login failure message with smooth fade effect
+              // Display login failure message in the center
               loginFailureMessage.innerHTML = 'Login failed. Please check your username and password.';
-              loginFailureMessage.style.opacity = '1';
-              loginFailureMessage.style.visibility = 'visible';
+              loginFailureMessage.style.display = 'block';
 
               // Hide the message after 2 seconds
               setTimeout(function () {
-                  loginFailureMessage.style.opacity = '0';
-                  loginFailureMessage.style.visibility = 'hidden';
-              }, 2000);
+                  loginFailureMessage.style.display = 'none';
+              }, 1000);
           }
       }
   };
