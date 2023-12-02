@@ -1,40 +1,29 @@
 <?php
-require_once "database.php";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mydatabase";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $enteredUsername = $_POST['username'];
-    $enteredPassword = $_POST['password'];
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Replace 'UserID' and 'Password' with the actual column names
-    $stmt = $conn->prepare('SELECT UserID, Password FROM users WHERE UserName = ?');
-    
-    if (!$stmt) {
-        die('Error preparing statement: ' . $conn->error);
-    }
-
-    $stmt->bind_param('s', $enteredUsername);
-    $stmt->execute();
-
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        // User found
-        $user = $result->fetch_assoc();
-
-        if ($enteredPassword === $user['Password']) {
-            // Login successful
-            $_SESSION['user_id'] = $user['UserID'];
-            header('Location: dashboard.html'); // Redirect to the dashboard or another page
-            exit();
-        } else {
-            // Password incorrect
-            echo 'Invalid username or password.';
-        }
-    } else {
-        // User not found
-        echo 'Invalid username or password.';
-    }
-
-    $stmt->close();  // Close the statement after use
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $response = array('success' => true, 'role' => $row['role']);
+} else {
+    $response = array('success' => false);
+}
+
+echo json_encode($response);
+
+$conn->close();
 ?>
