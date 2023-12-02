@@ -15,16 +15,18 @@ function login() {
               if (response.role === 'admin') {
                   window.location.href = '/Admin_Dashboard/admin.html';
               } else {
-                  window.location.href = '/Employee_Dashboard/Employee.html';
+                  window.location.href = 'employee.php';
               }
           } else {
-              // Display login failure message in the center
+              // Display login failure message with smooth fade effect
               loginFailureMessage.innerHTML = 'Login failed. Please check your username and password.';
-              loginFailureMessage.style.display = 'block';
+              loginFailureMessage.style.opacity = '1';
+              loginFailureMessage.style.visibility = 'visible';
 
               // Hide the message after 2 seconds
               setTimeout(function () {
-                  loginFailureMessage.style.display = 'none';
+                  loginFailureMessage.style.opacity = '0';
+                  loginFailureMessage.style.visibility = 'hidden';
               }, 2000);
           }
       }
