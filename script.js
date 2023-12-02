@@ -22,7 +22,7 @@ function login() {
               loginFailureMessage.innerHTML = 'Login failed. Please check your username and password.';
               loginFailureMessage.style.display = 'block';
 
-              // Hide the message after 2 seconds
+              // Hide the message after 1 sec
               setTimeout(function () {
                   loginFailureMessage.style.display = 'none';
               }, 1000);
