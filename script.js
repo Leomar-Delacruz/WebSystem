@@ -1,6 +1,7 @@
 function login() {
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
+  var loginFailureMessage = document.getElementById('loginFailureMessage');
 
   // Send login data to a PHP script for validation
   var xhr = new XMLHttpRequest();
@@ -17,8 +18,9 @@ function login() {
                   window.location.href = '/Employee_Dashboard/Employee.html';
               }
           } else {
-              // Display an alert for login failure
-              alert('Login failed. Please check your username and password.');
+              // Display login failure message in the center
+              loginFailureMessage.innerHTML = 'Login failed. Please check your username and password.';
+              loginFailureMessage.style.display = 'block';
           }
       }
   };
