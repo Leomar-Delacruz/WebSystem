@@ -21,6 +21,11 @@ function login() {
               // Display login failure message in the center
               loginFailureMessage.innerHTML = 'Login failed. Please check your username and password.';
               loginFailureMessage.style.display = 'block';
+
+              // Hide the message after 2 seconds
+              setTimeout(function () {
+                  loginFailureMessage.style.display = 'none';
+              }, 2000);
           }
       }
   };
