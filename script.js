@@ -14,7 +14,7 @@ function login() {
               // Redirect to the appropriate page based on the role
               if (response.role === 'admin') {
                   window.location.href = '/Admin_Dashboard/admin.html';
-              } else {
+              } else {  
                   window.location.href = '/Employee_Dashboard/Employee.html';
               }
           } else {
