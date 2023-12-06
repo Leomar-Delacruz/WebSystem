@@ -19,6 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($conn->query($insertSql) === TRUE) {
         echo "New transaction added successfully!";
+
+        // Reset auto-increment value for transactionid
+        $resetSql = "ALTER TABLE transaction AUTO_INCREMENT = 1";
+        $conn->query($resetSql);
+
+        echo "<br><a href='transaction.php'>Go back to Transactions</a>";
     } else {
         echo "Error: " . $insertSql . "<br>" . $conn->error;
     }
