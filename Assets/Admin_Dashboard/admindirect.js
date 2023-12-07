@@ -14,7 +14,7 @@
     }
 
   function redirectTosuppliers() {
-    window.location.href = '/gcustomer.html'; // Todo actual file path
+    window.location.href = '/customer.html'; // Todo actual file path
   }
 
 
