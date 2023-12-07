@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Product.css">
     <title>Add Product</title>
 </head>
 <body>
     <h2>Add Product</h2>
-    <form action="product.php" method="post">
-        <label for="productName">Product Name:</label>
-        <input type="text" name="productName" required>
+    <form action="product.php" method="post" class="input-container">
+        <label for="productName" class="input-label">Product Name:</label>
+        <input type="text" name="productName" class="input-field" autocomplete="productname"  placeholder="productname" required>
 
         <label for="category">Category:</label>
         <input type="text" name="category" required>
