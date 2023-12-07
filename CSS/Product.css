@@ -5,9 +5,12 @@
   display: grid;
   gap: 1ch;
   position: relative;
-  max-width: 190px;
+  width: 40vw;
+  height: 50vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: black;
+
+  border: 1px solid black;
 }
 
 .input-field {
@@ -17,7 +20,7 @@
   color: var(--c-text);
   font-size: 1rem;
   letter-spacing: 0.1ch;
-  width: 100%;
+  width: 30vw;
 }
 
 .input-field:not(:placeholder-shown) + .input-label {

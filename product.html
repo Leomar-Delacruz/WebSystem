@@ -8,12 +8,14 @@
 </head>
 <body>
     <h2>Add Product</h2>
-    <form action="product.php" method="post" class="input-container">
+    
+    <section class="input-container">
+    <form action="product.php" method="post">
         <label for="productName" class="input-label">Product Name:</label>
         <input type="text" name="productName" class="input-field" autocomplete="productname"  placeholder="productname" required>
 
-        <label for="category">Category:</label>
-        <input type="text" name="category" required>
+        <label for="category" class="input-label">Category:</label>
+        <input type="text" name="category" class="input-field" autocomplete="Category" required>
 
         <label for="description">Description:</label>
         <textarea name="description" rows="4" required></textarea>
@@ -29,5 +31,6 @@
 
         <input type="submit" value="Add Product">
     </form>
+</section>
 </body>
 </html>
