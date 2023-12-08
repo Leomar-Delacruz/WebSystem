@@ -25,10 +25,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->close();
 }
 
-// Fetch and display information about products
-$sqlSelect = "SELECT * FROM products";
-$result = $conn->query($sqlSelect);
+// Search functionality
+$searchKeyword = '';
+if (isset($_GET['search'])) {
+    $searchKeyword = $_GET['search'];
+    $sqlSelect = "SELECT * FROM products WHERE ProductName LIKE '%$searchKeyword%'";
+} else {
+    $sqlSelect = "SELECT * FROM products";
+}
 
+$result = $conn->query($sqlSelect);
 ?>
 
 <!DOCTYPE html>
@@ -84,16 +90,42 @@ $result = $conn->query($sqlSelect);
         .edit-link {
             display: inline-block;
             padding: 8px;
-            background-color:green; /* Light green color */
+            background-color: green; /* Light green color */
             color: white;
-            font-weight: bold;;
+            font-weight: bold;
             text-decoration: none;
             border-radius: 3px;
+        }
+
+        .search-form {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .search-input {
+            padding: 8px;
+            width: 200px;
+            box-sizing: border-box;
+        }
+
+        .search-button {
+            background-color: #008CBA;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <h2>Product List</h2>
+
+    <!-- Search Form -->
+    <form class="search-form" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <input type="text" class="search-input" name="search" placeholder="Search by Product Name" value="<?php echo $searchKeyword; ?>">
+        <button type="submit" class="search-button">Search</button>
+    </form>
 
     <!-- Display the table of products -->
     <table>
