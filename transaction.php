@@ -147,15 +147,15 @@ $result = $conn->query($sql);
         }
 
         .insert-btn {
-            background-color: #008CBA; /* Blue */
+            background-color: #588157; 
         }
 
         .collect-btn {
-            background-color: #f44336; /* Red */
+            background-color: #588157; 
         }
 
         .view-collect-btn {
-            background-color: #333; /* Dark Gray */
+            background-color: #588157; 
         }
 
         nav {
