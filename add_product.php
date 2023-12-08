@@ -54,6 +54,7 @@ $conn->close();
     </button> 
 
     <!-- Form for adding products -->
+    
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <h2 class="display-6">Add Product</h2>
 
