@@ -91,7 +91,6 @@ $result = $conn->query($sqlSelect);
         th {
             background-color: #00BFA6;
             color: #fff;
-            
              
         }
 
