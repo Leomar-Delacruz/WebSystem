@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
     $productId = $_GET['id'];
 
     // Retrieve product information based on the provided ID
-    $sqlSelect = "SELECT * FROM products WHERE ProductID = ?";
+    $sqlSelect = "SELECT * FROM products WHERE ProductName = ?";
     $stmtSelect = $conn->prepare($sqlSelect);
 
     if (!$stmtSelect) {
