@@ -26,8 +26,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                       VALUES ('$productName', '$transactionDate', $quantity, $price, $totalAmount)";
 
         if ($conn->query($insertSql) === TRUE) {
-            echo "New transaction added successfully!";
-            echo "<br><a href='transaction.php'>Go back to Transactions</a>";
+            // Close the database connection before outputting JavaScript
+            $conn->close();
+            ?>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Inserting</title>
+            </head>
+            <body>
+                <script>
+                    // Show success alert
+                    alert("New transaction added successfully!");
+                    // Ask user to go back or stay on the page
+                    if (confirm("Do you want to go back to Transactions?")) {
+                        // If user clicks 'OK', redirect to transaction.php
+                        window.location.href = 'transaction.php';
+                    }
+                </script>
+            </body>
+            </html>
+            <?php
+            exit; // Stop further execution of the PHP script
         } else {
             echo "Error: " . $insertSql . "<br>" . $conn->error;
         }
