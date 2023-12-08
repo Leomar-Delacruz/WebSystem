@@ -217,7 +217,7 @@ $result = $conn->query($sql);
                     echo "<td>" . $row["quantity"] . "</td>";
                     echo "<td>" . $row["price"] . "</td>";
                     echo "<td>" . $row["totalamount"] . "</td>";
-                    echo "<td><a href='edittransaction.php?id=" . $row["transactionid"] . "' class='btn' style='background-color: #4CAF50;'>Edit</a></td>";
+                    echo "<td><a href='edittransaction.php?id=" . $row["transactionid"] . "' class='btn btn-success'>Edit</a></td>";
                     echo "</tr>";
                 }
             } else {
