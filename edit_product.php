@@ -86,6 +86,11 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product</title>
     <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -95,10 +100,11 @@ $conn->close();
         }
 
         .navbar {
-            background-color: #333;
+            background-color: #fff;
             color: #fff;
-            padding: 15px;
+            
             text-align: center;
+            
         }
 
         .navbar a {
