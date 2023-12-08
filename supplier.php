@@ -1,3 +1,34 @@
+<?php
+require_once "database.php";
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $supplierName = $_POST['supplierName'];
+    $contactNumber = $_POST['contactNumber'];
+    $email = $_POST['email'];
+    $address = $_POST['address'];
+
+    // Prepare and execute the SQL statement to insert data into the suppliers table
+    $sql = "INSERT INTO suppliers (SupplierName, ContactNumber, Email, Address) VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+
+    if (!$stmt) {
+        die('Error preparing statement: ' . $conn->error);
+    }
+
+    $stmt->bind_param('ssss', $supplierName, $contactNumber, $email, $address);
+    $stmt->execute();
+
+    echo "Supplier added successfully.";
+
+    $stmt->close();
+}
+
+// Fetch and display information about suppliers
+$sqlSelect = "SELECT * FROM suppliers";
+$result = $conn->query($sqlSelect);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +91,7 @@
     </style>
 </head>
 <body>
-    <form action="supplier.php" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <h2>Add Supplier</h2>
 
         <label for="supplierName">Supplier Name:</label>
@@ -78,6 +109,10 @@
         <input type="submit" value="Add Supplier">
         <a href="supplierlist.php">Back</a>
     </form>
-
 </body>
 </html>
+
+<?php
+// Close the database connection
+$conn->close();
+?>
