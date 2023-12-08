@@ -34,53 +34,29 @@ $conn->close();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/CSS/Product.css">
+    <link rel="stylesheet" href="/CSS/button-1.css">
+    <link rel="stylesheet" href="/CSS/button-2.css">
     <title>Add Product</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        form {
-            width: 50%;
-            margin: 20px auto;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #008CBA;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
-    <h2>Add New Product</h2>
+
+    
+  <section class="parent-form">
+
+    <button class="button2" id="Back">
+        Back
+    </button> 
 
     <!-- Form for adding products -->
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <h2 class="display-6">Add Product</h2>
+        
         <label for="productName">Product Name:</label>
         <input type="text" id="productName" name="productName" required>
 
@@ -89,5 +65,18 @@ $conn->close();
 
         <button type="submit">Add Product</button>
     </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+<script>
+    // This is Btn back
+    var Back = document.getElementById("Back");
+
+    Back.addEventListener("click", function() {
+        // Go back to the previous page
+        window.history.back();
+    });
+</script>
+
 </html>
