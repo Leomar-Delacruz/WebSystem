@@ -120,7 +120,7 @@ $result = $conn->query($sqlSelect);
         ?>
     </tbody>
 </table>
-<a href="product_information.php" class="add-product-btn">Add Product</a>
+<a href="add_product.php" class="add-product-btn">Add Product</a>
 </body>
 </html>
 
