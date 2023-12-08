@@ -61,6 +61,7 @@
     $conn->close();
     ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +70,6 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    
     <title>Edit Transaction</title>
     <style>
         body {
@@ -79,60 +79,72 @@
             font-family: Arial, sans-serif;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            width: 100%;
-        }
-
         nav {
             display: flex;
             justify-content: space-around;
-            background-color: #f1f1f1;
-            padding: 10px;
-            width: 100%;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+
+            box-shadow: 2px 5px 4px #ddd;
+            
+            /* outline: 1px solid black; */
         }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
+        nav p {
+            margin-right: 28vw;
+        }
+
+        .container {
+            margin-top: 8vh;
+            /* outline: 1px solid black; */
         }
 
         form {
             width: 50%;
-            margin-top: 20px;
+            height: 70vh;
+            margin: auto;
+            outline: 1px solid black;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+            gap: 1vh;
+        }
+
+        input {
+            width: 20vw;
+            height: 6vh;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h2>Edit Transaction</h2>
-    </header>
-    
     <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+        <button type="button" class="btn btn-success">
+        Back</button>
+        <p class="display-6">Edit Transaction</p>
+        </nav>
+    </header>
 
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?id=' . $transactionID); ?>" method="post">
-        <label for="product_name">Product Name:</label>
-        <input type="text" name="product_name" value="<?php echo htmlspecialchars($productName); ?>" required>
+    <div class="container">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?id=' . $transactionID); ?>" method="post">
+            <label for="product_name" class="lead
+            ">Product Name:</label>
+            <input type="text" name="product_name" value="<?php echo htmlspecialchars($productName); ?>" required>
 
-        <label for="transaction_date">Transaction Date:</label>
-        <input type="date" name="transaction_date" value="<?php echo htmlspecialchars($transactionDate); ?>" required>
+            <label for="transaction_date" class="lead">Transaction Date:</label>
+            <input type="date" name="transaction_date" value="<?php echo htmlspecialchars($transactionDate); ?>" required>
 
-        <label for="quantity">Quantity:</label>
-        <input type="number" name="quantity" value="<?php echo htmlspecialchars($quantity); ?>" required>
+            <label for="quantity" class="lead">Quantity:</label>
+            <input type="number" name="quantity" value="<?php echo htmlspecialchars($quantity); ?>" required>
 
-        <label for="price">Price:</label>
-        <input type="number" name="price" step="0.01" value="<?php echo htmlspecialchars($price); ?>" required>
+            <label for="price" class="lead">Price:</label>
+            <input type="number" name="price" step="0.01" value="<?php echo htmlspecialchars($price); ?>" required>
 
-        <input type="submit" value="Update Transaction">
-    </form>
+            <input type="submit" value="Update Transaction">
+        </form>
+    </div>
     
     <a href="transaction.php">Back to Transactions</a>
 
