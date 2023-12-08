@@ -24,9 +24,14 @@
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $productId; ?>">
 
         <h2 class="display-6">Add Product</h2>
-
+        <!-- New -->
         <input type="text" name="productName" class="input" placeholder="Product Name" required>
 
+        <input type="number" id="pricePerUnit" class="input" name="pricePerUnit" step="0.01" value="<?php echo $product['PricePerUnit']; ?>" placeholder="Price per unit" required>
+        
+
+        <!-- new -->
+        
         <input type="text" name="category" class="input" placeholder="Category" required>
 
         <textarea name="description" rows="4" class="input" placeholder="Description" required></textarea>
