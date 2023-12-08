@@ -157,6 +157,9 @@ $result = $conn->query($sqlSelect);
 <body>
 
     <div class="nav">
+        <button class="button2" id="Back">
+                Back
+        </button>
         <h2>Product List</h2>
     </div>
     <!-- Search Form -->
@@ -194,6 +197,15 @@ $result = $conn->query($sqlSelect);
 </table>
 <a href="add_product.php" class="add-product-btn">Add Product</a>
 </body>
+<script>
+    // This is Btn back
+    var Back = document.getElementById("Back");
+
+    Back.addEventListener("click", function() {
+        // Go back to the previous page
+        window.history.back();
+    });
+</script>
 </html>
 
 <?php
