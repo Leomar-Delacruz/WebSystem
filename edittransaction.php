@@ -129,10 +129,18 @@ $conn->close();
             width: 20vw;
             height: 6vh;
         }
+
+        label, input {
+            color: #6c757d;
+        }
+
+        nav p{
+          color: #6c757d; 
+        }
     </style>
 </head>
 <body>
-    
+
     <nav>
         <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
         <p class="display-6">Edit Transaction</p>

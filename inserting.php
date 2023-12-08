@@ -122,7 +122,7 @@ $conn->close();
             height: 6vh;
         }
 
-        label {
+        label, input {
             color: #6c757d;
         }
 
