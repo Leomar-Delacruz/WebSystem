@@ -84,6 +84,12 @@ $result = $conn->query($sql);
 
     <title>Transaction Information</title>
     <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
