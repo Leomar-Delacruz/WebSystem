@@ -90,8 +90,4 @@ $conn->close();
         <button type="submit">Add Product</button>
     </form>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> bfdf1a3868b4ce36771b7d4ac1abc2c0e842fd89
