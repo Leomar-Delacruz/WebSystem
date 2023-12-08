@@ -97,7 +97,7 @@
 
         .container {
             margin-top: 8vh;
-            /* outline: 1px solid black; */
+            outline: 1px solid black;
         }
 
         form {
@@ -142,7 +142,7 @@
             <label for="price" class="lead">Price:</label>
             <input type="number" name="price" step="0.01" value="<?php echo htmlspecialchars($price); ?>" required>
 
-            <input type="submit" value="Update Transaction">
+            <input type="submit" value="Update Transaction" class="btn btn-success">
         </form>
     </div>
     
