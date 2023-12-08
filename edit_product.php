@@ -91,6 +91,7 @@ $conn->close();
             margin: 0;
             padding: 0;
         }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -101,42 +102,58 @@ $conn->close();
 
         .navbar {
             background-color: #fff;
-            color: #fff;
-            
+            color: rgb(62, 62, 62);
+            box-shadow: 2px 3px 5px  rgb(130, 129, 129);
             text-align: center;
+            width: 100vw;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
         }
 
         .navbar a {
-            color: #fff;
+            color: rgb(83, 83, 83);
             text-decoration: none;
             margin: 0 15px;
+            font-size: 2rem;
         }
 
         h2 {
             color: #333;
+            margin-top: 5vh;
         }
 
         form {
-            width: 50%;
+            width: 30vw;
+            height: 50vh;
             margin: 20px auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1vh;
         }
 
         label {
-            display: block;
-            margin-bottom: 8px;
-            text-align: left;
+            margin-top: 4vh;
+            margin-right: 15vw;
+
+        
         }
 
         input {
-            width: 100%;
+            width: 20vw;
+            height: 7vh;
             padding: 10px;
             margin-bottom: 15px;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
         }
 
         button {
@@ -147,6 +164,9 @@ $conn->close();
             border-radius: 5px;
             cursor: pointer;
             margin-right: 10px;
+
+            width: 10vw;
+            height: 5vh;
         }
 
         .delete-btn {
