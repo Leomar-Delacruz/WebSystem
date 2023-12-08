@@ -114,8 +114,8 @@ $result = $conn->query($sql);
 
         th, td {
             padding: 12px;
-            text-align: left;
             text-align: center;
+            color: #343a40;
         }
 
         th {
@@ -173,6 +173,7 @@ $result = $conn->query($sql);
 
         nav p {
             margin-right: 28vw;
+            color: #6c757d;
         }
     </style>
 </head>
