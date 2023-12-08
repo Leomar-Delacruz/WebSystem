@@ -132,11 +132,11 @@ $conn->close();
     </style>
 </head>
 <body>
+    
     <nav>
         <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
         <p class="display-6">Edit Transaction</p>
-        </nav>
-    </header>
+    </nav>
 
     <div class="container">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?id=' . $transactionID); ?>" method="post">
