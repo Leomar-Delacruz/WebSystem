@@ -103,7 +103,7 @@ $result = $conn->query($sql);
         }
 
         table {
-            width: 80%;
+            width: 70vw;
             margin: 20px auto;
             border-collapse: collapse;
         }
@@ -115,10 +115,11 @@ $result = $conn->query($sql);
         th, td {
             padding: 12px;
             text-align: left;
+            text-align: center;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #d8f3dc;
         }
 
         .container {
