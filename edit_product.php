@@ -84,6 +84,8 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <title>Edit Product</title>
     <style>
 
@@ -162,8 +164,6 @@ $conn->close();
         }
 
         button {
-            background-color: #008CBA;
-            color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
@@ -174,16 +174,11 @@ $conn->close();
             height: 7vh;
         }
 
-        .delete-btn {
-            background-color: #FF0000;
-        }
 
         .back-btn {
-            background-color: #333;
-            color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 20px 20px;
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -202,14 +197,18 @@ $conn->close();
         <label for="pricePerUnit">Price Per Unit:</label>
         <input type="number" id="pricePerUnit" name="pricePerUnit" step="0.01" value="<?php echo $product['PricePerUnit']; ?>" required>
 
-        <button type="submit">Update Product</button>
+        <button type="submit" class="btn btn-outline-primary">Update Product</button>
         
         <!-- Delete Product Button -->
-        <button type="submit" class="delete-btn" name="delete">Delete Product</button>
+        <button type="submit" class="delete-btn btn btn-outline-danger name="delete">Delete Product</button>
     </form>
 
     <!-- Back button to product.php -->
-    <a href="product.php" class="back-btn">Back to Product List</a>
+    <a href="product.php" class="back-btn btn btn-outline-success">Back to Product List</a>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
 
