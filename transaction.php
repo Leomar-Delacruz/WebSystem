@@ -122,8 +122,18 @@ $result = $conn->query($sql);
         }
 
         .container {
-            text-align: center;
-            margin-top: 20px;
+            margin-top: 8vh;
+
+            width: 70vw;
+            height: 8vh;
+
+            /* outline: 1px solid black; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
         }
 
         .btn {
@@ -147,16 +157,32 @@ $result = $conn->query($sql);
         .view-collect-btn {
             background-color: #333; /* Dark Gray */
         }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+
+            box-shadow: 2px 5px 4px #ddd;
+            
+            /* outline: 1px solid black; */
+        }
+
+        nav p {
+            margin-right: 28vw;
+        }
     </style>
 </head>
 <body>
     
         <nav>
-            <button>Click me</button>
-            <h1>Transaction Information</h1>
+        <button type="button" class="btn btn-success">
+        Back</button>
+        <p class="display-6">Transaction Information</p>
         </nav>
 
-    <h2>Transaction Information</h2>
     <div class="container">
         <a href="inserting.php" class="btn insert-btn">Insert New Transaction</a>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
