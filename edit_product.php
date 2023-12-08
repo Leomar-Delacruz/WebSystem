@@ -94,6 +94,19 @@ $conn->close();
             text-align: center;
         }
 
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
         h2 {
             color: #333;
         }
@@ -101,11 +114,16 @@ $conn->close();
         form {
             width: 50%;
             margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         label {
             display: block;
             margin-bottom: 8px;
+            text-align: left;
         }
 
         input {
@@ -122,28 +140,27 @@ $conn->close();
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .delete-btn {
+            background-color: #FF0000;
         }
 
         .back-btn {
             background-color: #333;
-            margin-top: 10px;
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
         }
-
-        .delete-btn {
-            background-color: #FF0000;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="product.php">Product List</a>
+    </div>
+
     <h2>Edit Product</h2>
 
     <!-- Form for editing product -->
@@ -164,3 +181,4 @@ $conn->close();
     <a href="product.php" class="back-btn">Back to Product List</a>
 </body>
 </html>
+
