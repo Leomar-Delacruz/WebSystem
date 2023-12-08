@@ -200,7 +200,8 @@ $conn->close();
         <button type="submit" class="btn btn-outline-primary">Update Product</button>
         
         <!-- Delete Product Button -->
-        <button type="submit" class="delete-btn btn btn-outline-danger name="delete">Delete Product</button>
+        <button type="submit" class="delete-btn btn btn-outline-danger" name="delete">Delete Product</button>
+        
     </form>
 
     <!-- Back button to product.php -->
