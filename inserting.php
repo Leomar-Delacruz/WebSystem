@@ -121,6 +121,14 @@ $conn->close();
             width: 20vw;
             height: 6vh;
         }
+
+        label {
+            color: #6c757d;
+        }
+
+        nav p {
+            color: #6c757d; 
+        }
     </style>
 </head>
 <body>
@@ -133,19 +141,21 @@ $conn->close();
     <div class="container">
         <form action="inserting.php" method="post">
 
-            <label for="product_name">Product Name:</label>
+            <div></div>
+
+            <label for="product_name" class="lead">Product Name:</label>
             <input type="text" name="product_name" required>
 
-            <label for="transaction_date">Transaction Date:</label>
+            <label for="transaction_date" class="lead">Transaction Date:</label>
             <input type="date" name="transaction_date" required>
 
-            <label for="quantity">Quantity:</label>
+            <label for="quantity" class="lead">Quantity:</label>
             <input type="number" name="quantity" required>
 
-            <label for="price">Price:</label>
+            <label for="price" class="lead">Price:</label>
             <input type="number" name="price" step="0.01" required>
 
-            <input type="submit" value="Add Transaction">
+            <input type="submit" value="Add Transaction" class="btn btn-success">
         </form>
     </div>
 
