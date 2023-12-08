@@ -1,3 +1,64 @@
+
+
+<?php
+require_once "database.php";
+
+// Check if the product ID is provided in the URL
+if (isset($_GET['id'])) {
+    $productId = $_GET['id'];
+
+    // Retrieve product information based on the provided ID
+    $sqlSelect = "SELECT * FROM products WHERE ProductID = ?";
+    $stmtSelect = $conn->prepare($sqlSelect);
+
+    if (!$stmtSelect) {
+        die('Error preparing statement: ' . $conn->error);
+    }
+
+    $stmtSelect->bind_param('i', $productId);
+    $stmtSelect->execute();
+
+    $resultSelect = $stmtSelect->get_result();
+
+    if ($resultSelect->num_rows > 0) {
+        $product = $resultSelect->fetch_assoc();
+    } else {
+        echo "Product not found.";
+        exit();
+    }
+
+    $stmtSelect->close();
+
+    // Check if the form is submitted for updating product information
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Retrieve form data
+        $productName = $_POST['productName'];
+        $pricePerUnit = $_POST['pricePerUnit'];
+
+        // Prepare and execute the SQL statement to update product information
+        $sqlUpdate = "UPDATE products SET ProductName = ?, PricePerUnit = ? WHERE ProductID = ?";
+        $stmtUpdate = $conn->prepare($sqlUpdate);
+
+        if (!$stmtUpdate) {
+            die('Error preparing statement: ' . $conn->error);
+        }
+
+        $stmtUpdate->bind_param('sdi', $productName, $pricePerUnit, $productId);
+        $stmtUpdate->execute();
+
+        echo "Product updated successfully.";
+
+        $stmtUpdate->close();
+    }
+} else {
+    echo "Product ID not provided.";
+    exit();
+}
+
+// Close the database connection
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
