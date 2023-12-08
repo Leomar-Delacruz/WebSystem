@@ -56,14 +56,12 @@ $conn->close();
     <!-- Form for adding products -->
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <h2 class="display-6">Add Product</h2>
-        
-        <label for="productName">Product Name:</label>
-        <input type="text" id="productName" name="productName" required>
 
-        <label for="pricePerUnit">Price Per Unit:</label>
-        <input type="number" id="pricePerUnit" name="pricePerUnit" step="0.01" required>
+        <input type="text" id="productName" name="productName" class="input"  required placeholder="Product Name">
 
-        <button type="submit">Add Product</button>
+        <input type="number" id="pricePerUnit" name="pricePerUnit" step="0.01" required class="input" placeholder="Price Per Unit">
+
+        <input type="submit" class="btn" value="Add Product">
     </form>
 
 
