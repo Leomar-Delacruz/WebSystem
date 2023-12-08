@@ -54,12 +54,16 @@ $result = $conn->query($sqlSelect);
         h2 {
             text-align: center;
             color: #333;
+            background-color: #008CBA;
+            padding: 10px;
+            margin: 0;
         }
 
         table {
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
+            background-color: #fff;
         }
 
         table, th, td {
@@ -72,7 +76,8 @@ $result = $conn->query($sqlSelect);
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #008CBA;
+            color: #fff;
         }
 
         .add-product-btn {
@@ -90,7 +95,7 @@ $result = $conn->query($sqlSelect);
         .edit-link {
             display: inline-block;
             padding: 8px;
-            background-color: green; /* Light green color */
+            background-color: #4CAF50; /* Green color */
             color: white;
             font-weight: bold;
             text-decoration: none;
@@ -116,9 +121,30 @@ $result = $conn->query($sqlSelect);
             border-radius: 5px;
             cursor: pointer;
         }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
     </style>
 </head>
 <body>
+
     <h2>Product List</h2>
 
     <!-- Search Form -->
