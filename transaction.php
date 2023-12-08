@@ -144,7 +144,6 @@ $result = $conn->query($sql);
         <a href="/insertingtransaction.html" class="btn insert-btn">Insert New Transaction</a>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <button type="submit" class="btn collect-btn" name="collect_total" onclick="return confirm('Are you sure you want to collect the total amount?')">Collect Total Amount</button>
-            <button type="button" class="btn" onclick="deleteData()">Delete All Data</button>
             <a href="viewtotalamount.php" class="btn view-collect-btn">View Collected Total</a>
         </form>
     </div>
