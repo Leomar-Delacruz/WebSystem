@@ -21,12 +21,11 @@
         Back
     </button> 
 
-    <form action="product.php" method="post">
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $productId; ?>">
 
         <h2 class="display-6">Add Product</h2>
 
         <input type="text" name="productName" class="input" placeholder="Product Name" required>
-
 
         <input type="text" name="category" class="input" placeholder="Category" required>
 
