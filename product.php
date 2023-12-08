@@ -59,7 +59,7 @@ $result = $conn->query($sqlSelect);
             background-color: #fff;
             box-shadow: 2px 2px 4px rgb(130, 129, 129);
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             height: 9vh;
         }
@@ -67,6 +67,7 @@ $result = $conn->query($sqlSelect);
         .nav h2 {
             color: rgb(130, 129, 129); 
             font-size: 2rem;
+            margin-right: 30vw;
         }
 
         table {
