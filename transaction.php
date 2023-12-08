@@ -72,13 +72,24 @@ $result = $conn->query($sql);
 ?>
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
     <title>Transaction Information</title>
     <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -92,7 +103,7 @@ $result = $conn->query($sql);
         }
 
         table {
-            width: 80%;
+            width: 70vw;
             margin: 20px auto;
             border-collapse: collapse;
         }
@@ -103,16 +114,27 @@ $result = $conn->query($sql);
 
         th, td {
             padding: 12px;
-            text-align: left;
+            text-align: center;
+            color: #343a40;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #d8f3dc;
         }
 
         .container {
-            text-align: center;
-            margin-top: 20px;
+            margin-top: 8vh;
+
+            width: 70vw;
+            height: 8vh;
+
+            /* outline: 1px solid black; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
         }
 
         .btn {
@@ -126,22 +148,45 @@ $result = $conn->query($sql);
         }
 
         .insert-btn {
-            background-color: #008CBA; /* Blue */
+            background-color: #588157; 
         }
 
         .collect-btn {
-            background-color: #f44336; /* Red */
+            background-color: #588157; 
         }
 
         .view-collect-btn {
-            background-color: #333; /* Dark Gray */
+            background-color: #588157; 
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+
+            box-shadow: 2px 5px 4px #ddd;
+            
+            /* outline: 1px solid black; */
+        }
+
+        nav p {
+            margin-right: 28vw;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
-    <h2>Transaction Information</h2>
+    
+        <nav>
+        <button type="button" class="btn btn-success">
+        Back</button>
+        <p class="display-6">Transaction Information</p>
+        </nav>
+
     <div class="container">
-        <a href="/insertingtransaction.html" class="btn insert-btn">Insert New Transaction</a>
+        <a href="inserting.php" class="btn insert-btn">Insert New Transaction</a>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <button type="submit" class="btn collect-btn" name="collect_total" onclick="return confirm('Are you sure you want to collect the total amount?')">Collect Total Amount</button>
             <a href="viewtotalamount.php" class="btn view-collect-btn">View Collected Total</a>
@@ -172,7 +217,7 @@ $result = $conn->query($sql);
                     echo "<td>" . $row["quantity"] . "</td>";
                     echo "<td>" . $row["price"] . "</td>";
                     echo "<td>" . $row["totalamount"] . "</td>";
-                    echo "<td><a href='edittransaction.php?id=" . $row["transactionid"] . "' class='btn' style='background-color: #4CAF50;'>Edit</a></td>";
+                    echo "<td><a href='edittransaction.php?id=" . $row["transactionid"] . "' class='btn btn-success'>Edit</a></td>";
                     echo "</tr>";
                 }
             } else {
@@ -194,5 +239,7 @@ $result = $conn->query($sql);
             }
         }
     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -16,6 +16,9 @@ if ($result === false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <title>View Collected Total Amounts</title>
     <style>
         body {
@@ -25,33 +28,29 @@ if ($result === false) {
             padding: 0;
         }
 
-        h2 {
-            text-align: center;
-            color: #333;
-        }
 
         table {
             width: 50%;
-            margin: 20px auto;
+            margin: 10vh auto;
             border-collapse: collapse;
+
+            box-shadow: 4px 5px 4px #ddd;
+           
         }
 
         table, th, td {
             border: 1px solid #ddd;
+            
         }
 
         th, td {
             padding: 12px;
-            text-align: left;
+            text-align: center;
+            color: #343a40;
         }
 
         th {
             background-color: #f2f2f2;
-        }
-
-        .container {
-            text-align: center;
-            margin-top: 20px;
         }
 
         .btn {
@@ -67,10 +66,33 @@ if ($result === false) {
         .back-btn {
             background-color: #333; /* Dark Gray */
         }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+
+            box-shadow: 2px 5px 4px #ddd;
+            
+            /* outline: 1px solid black; */
+        }
+
+        nav p {
+            margin-right: 28vw;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
-    <h2>View Collected Total Amounts</h2>
+
+    <nav>
+        <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
+        <p class="display-6">View Collected Total Amounts</p>
+    </nav>
+
+    
     <table>
         <thead>
             <tr>
@@ -94,8 +116,7 @@ if ($result === false) {
             ?>
         </tbody>
     </table>
-    <div class="container">
-        <a href="transaction.php" class="btn back-btn">Back to Transactions</a>
-    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
