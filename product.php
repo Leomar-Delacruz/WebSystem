@@ -64,7 +64,7 @@ $result = $conn->query($sqlSelect);
         }
 
         .nav h2 {
-            color: #000; 
+            color: rgb(130, 129, 129); 
             font-size: 2rem;
         }
 
@@ -84,12 +84,11 @@ $result = $conn->query($sqlSelect);
         th, td {
             padding: 12px;
             text-align: center;
-
-        
+            font-size: 1.2rem;
         }
 
         th {
-            background-color: #00BFA6;
+            background-color: #008CBA;
             color: #fff;
              
         }
@@ -140,6 +139,8 @@ $result = $conn->query($sqlSelect);
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            height: 5vh;
+            width: 6vw;
         }
 
 
