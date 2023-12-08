@@ -97,14 +97,20 @@
 
         .container {
             margin-top: 8vh;
-            outline: 1px solid black;
+            /* outline: 1px solid black; */
+
+            width: 40vw;
+            height: 56vh;
+
+            border-radius: 20px;
+            box-shadow: 4px 5px 4px #ddd;
         }
 
         form {
-            width: 50%;
-            height: 70vh;
+            width: 40%;
+            height: 60vh;
             margin: auto;
-            outline: 1px solid black;
+            /* outline: 1px solid black; */
 
             display: flex;
             flex-direction: column;
@@ -121,14 +127,16 @@
 </head>
 <body>
     <nav>
-        <button type="button" class="btn btn-success">
-        Back</button>
+        <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
         <p class="display-6">Edit Transaction</p>
         </nav>
     </header>
 
     <div class="container">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?id=' . $transactionID); ?>" method="post">
+
+            <div>   
+            </div>
             <label for="product_name" class="lead
             ">Product Name:</label>
             <input type="text" name="product_name" value="<?php echo htmlspecialchars($productName); ?>" required>
@@ -146,7 +154,6 @@
         </form>
     </div>
     
-    <a href="transaction.php">Back to Transactions</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
