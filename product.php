@@ -44,19 +44,28 @@ $result = $conn->query($sqlSelect);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Information</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+
+        * {
             margin: 0;
             padding: 0;
         }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
-        h2 {
-            text-align: center;
-            color: #333;
-            background-color: #008CBA;
-            padding: 10px;
-            margin: 0;
+        .nav {
+            background-color: #fff;
+            box-shadow: 2px 2px 4px rgb(130, 129, 129);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 9vh;
+        }
+
+        .nav h2 {
+            color: #000; 
+            font-size: 2rem;
         }
 
         table {
@@ -64,24 +73,34 @@ $result = $conn->query($sqlSelect);
             margin: 20px auto;
             border-collapse: collapse;
             background-color: #fff;
+
         }
 
         table, th, td {
             border: 1px solid #ddd;
+
         }
 
         th, td {
             padding: 12px;
-            text-align: left;
+            text-align: center;
+
+        
         }
 
         th {
-            background-color: #008CBA;
+            background-color: #00BFA6;
             color: #fff;
+            
+            border: 1px solid black;
         }
 
+
         .add-product-btn {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
             width: 150px;
             margin: 20px auto;
             padding: 10px;
@@ -89,13 +108,14 @@ $result = $conn->query($sqlSelect);
             background-color: #008CBA;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 20px;
         }
+
 
         .edit-link {
             display: inline-block;
             padding: 8px;
-            background-color: #4CAF50; /* Green color */
+            background-color: #00BFA6; 
             color: white;
             font-weight: bold;
             text-decoration: none;
@@ -103,13 +123,14 @@ $result = $conn->query($sqlSelect);
         }
 
         .search-form {
-            margin: 20px auto;
+            margin-top: 4vh;
+            margin-left: 40vw;
             text-align: center;
         }
 
         .search-input {
-            padding: 8px;
-            width: 200px;
+            height: 5vh;
+            width: 15vw;
             box-sizing: border-box;
         }
 
@@ -122,31 +143,22 @@ $result = $conn->query($sqlSelect);
             cursor: pointer;
         }
 
-        /* Navigation Bar Styles */
-        nav {
-            background-color: #333;
-            overflow: hidden;
+
+        table {
+            width: 60vw;
+            height: 20vh;
+
+            box-shadow: 2px 2px 4px rgb(130, 129, 129);
         }
 
-        nav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+        
     </style>
 </head>
 <body>
 
-    <h2>Product List</h2>
-
+    <div class="nav">
+        <h2>Product List</h2>
+    </div>
     <!-- Search Form -->
     <form class="search-form" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="text" class="search-input" name="search" placeholder="Search by Product Name" value="<?php echo $searchKeyword; ?>">
@@ -155,6 +167,7 @@ $result = $conn->query($sqlSelect);
 
     <!-- Display the table of products -->
     <table>
+  <div class="table-container">
     <thead>
         <tr>
             <th>Product Name</th>
@@ -177,6 +190,7 @@ $result = $conn->query($sqlSelect);
         }
         ?>
     </tbody>
+ </div>
 </table>
 <a href="add_product.php" class="add-product-btn">Add Product</a>
 </body>

@@ -29,7 +29,29 @@ if (isset($_GET['id'])) {
 
     // Check if the form is submitted for updating product information
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Retrieve form data
+        // Check if the "Delete" button is clicked
+        if (isset($_POST['delete'])) {
+            // Prepare and execute the SQL statement to delete the product
+            $sqlDelete = "DELETE FROM products WHERE ProductID = ?";
+            $stmtDelete = $conn->prepare($sqlDelete);
+
+            if (!$stmtDelete) {
+                die('Error preparing statement: ' . $conn->error);
+            }
+
+            $stmtDelete->bind_param('i', $productId);
+            $stmtDelete->execute();
+
+            echo "Product deleted successfully.";
+
+            $stmtDelete->close();
+
+            // Redirect to the product list after deletion
+            header("Location: product.php");
+            exit();
+        }
+
+        // If not deleting, then it's an update
         $productName = $_POST['productName'];
         $pricePerUnit = $_POST['pricePerUnit'];
 
@@ -105,6 +127,19 @@ $conn->close();
         .back-btn {
             background-color: #333;
             margin-top: 10px;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .delete-btn {
+            background-color: #FF0000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -120,6 +155,9 @@ $conn->close();
         <input type="number" id="pricePerUnit" name="pricePerUnit" step="0.01" value="<?php echo $product['PricePerUnit']; ?>" required>
 
         <button type="submit">Update Product</button>
+        
+        <!-- Delete Product Button -->
+        <button type="submit" class="delete-btn" name="delete">Delete Product</button>
     </form>
 
     <!-- Back button to product.php -->
