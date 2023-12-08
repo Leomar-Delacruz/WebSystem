@@ -150,6 +150,12 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
+    
+        <nav>
+            <button>Click me</button>
+            <h1>Transaction Information</h1>
+        </nav>
+
     <h2>Transaction Information</h2>
     <div class="container">
         <a href="inserting.php" class="btn insert-btn">Insert New Transaction</a>
