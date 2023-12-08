@@ -5,7 +5,7 @@
   }
 
   function redirectToproducts() {
-    window.location.href = '/product.html'; // Todo actual file path
+    window.location.href = '/productadd.php'; // Todo actual file path
   }
 
 
