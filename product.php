@@ -92,7 +92,7 @@ $result = $conn->query($sqlSelect);
             background-color: #00BFA6;
             color: #fff;
             
-            border: 1px solid black;
+             
         }
 
 
