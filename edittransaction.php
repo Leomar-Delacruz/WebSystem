@@ -69,6 +69,13 @@ $conn->close();
     <title>Edit Transaction</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body class="container mt-5">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
