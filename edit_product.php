@@ -121,28 +121,31 @@ $conn->close();
         }
 
         h2 {
-            color: #333;
+            color: rgb(103, 102, 102);
+            font-size: 2rem;
             margin-top: 5vh;
         }
 
         form {
             width: 30vw;
-            height: 50vh;
+            height: 55vh;
             margin: 20px auto;
             background-color: #fff;
-            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1vh;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px  rgb(130, 129, 129);
+
         }
 
         label {
             margin-top: 4vh;
             margin-right: 15vw;
-
+            color: rgb(103, 102, 102);
         
         }
 
@@ -154,6 +157,8 @@ $conn->close();
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
+            font-size: 1.2rem;
+            color: rgb(103, 102, 102);
         }
 
         button {
@@ -166,7 +171,7 @@ $conn->close();
             margin-right: 10px;
 
             width: 10vw;
-            height: 5vh;
+            height: 7vh;
         }
 
         .delete-btn {
