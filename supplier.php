@@ -39,58 +39,64 @@ $result = $conn->query($sqlSelect);
     <title>Add Supplier</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+
+            box-shadow: 2px 5px 4px #ddd;
+            
+            /* outline: 1px solid black; */
+        }
+
+        nav p {
+            margin-right: 28vw;
+        }
+
+        .container {
+            margin-top: 8vh;
+            /* outline: 1px solid black; */
+
+            width: 40vw;
+            height: 56vh;
+
+            border-radius: 20px;
+            box-shadow: 4px 5px 4px #ddd;
         }
 
         form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
+            width: 40%;
+            height: 60vh;
+            margin: auto;
+            /* outline: 1px solid black; */
 
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+            gap: 1vh;
         }
 
         input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
+            width: 20vw;
+            height: 6vh;
         }
 
-        input[type="submit"] {
-            background-color: #008CBA;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+        label, input {
+            color: #6c757d;
         }
 
-        a {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-            color: #008CBA;
-            text-decoration: none;
+        nav p {
+            color: #6c757d; 
         }
-
     </style>
 </head>
 <body>
@@ -100,6 +106,7 @@ $result = $conn->query($sqlSelect);
     <p class="display-6">Add Supplier</p>
     </nav>
 
+    <div class="container">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <h2>Add Supplier</h2>
 
@@ -118,6 +125,7 @@ $result = $conn->query($sqlSelect);
         <input type="submit" value="Add Supplier">
         <a href="supplierlist.php">Back</a>
     </form>
+  </div>
 </body>
 </html>
 
