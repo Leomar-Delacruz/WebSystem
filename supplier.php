@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param('ssss', $supplierName, $contactNumber, $email, $address);
     $stmt->execute();
 
-    echo "Supplier added successfully.";
+    // Display JavaScript alert after successful insertion
+    echo '<script>alert("Supplier added successfully.");</script>';
 
     $stmt->close();
 }
@@ -28,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $sqlSelect = "SELECT * FROM suppliers";
 $result = $conn->query($sqlSelect);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -88,9 +90,31 @@ $result = $conn->query($sqlSelect);
             color: #008CBA;
             text-decoration: none;
         }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+
+            box-shadow: 2px 5px 4px #ddd;
+
+            /* outline: 1px solid black; */
+            }
+
+            nav p {
+            margin-right: 28vw;
+        }
     </style>
 </head>
 <body>
+
+    <nav>
+    <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
+    <p class="display-6">Add New Transaction</p>
+    </nav>
+
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <h2>Add Supplier</h2>
 
