@@ -84,7 +84,8 @@ $result = $conn->query($sqlSelect);
 
         
     <nav>
-        <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
+    <button type="button" class="btn btn-success" id="Back">
+        Back</button>
         <p class="display-6">Supplier Information</p>
     </nav>
 
@@ -120,8 +121,20 @@ $result = $conn->query($sqlSelect);
 
     <!-- Add Supplier Button -->
     <a href="supplier.php" class="add-supplier-btn btn btn-success">Add Supplier</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script>
+    // This is Btn back
+    var Back = document.getElementById("Back");
+
+    Back.addEventListener("click", function() {
+        // Go back to the previous page
+        window.history.back();
+    });
+</script>
+
 </html>
 
 <?php
