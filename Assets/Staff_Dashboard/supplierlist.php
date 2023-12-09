@@ -125,16 +125,16 @@ $result = $conn->query($sqlSelect);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
-<script>
+    <script>
       // This is Btn Back
 
-  var Back = document.getElementById("Back");
+        var Back = document.getElementById("Back");
 
-  Back.addEventListener("click", function() {
-    // Redirect to /Assets/Admin_Dashboard/Dashboard.html" directly
-    window.location.href = "/Assets/Admin_Dashboard/Dashboard.html";
-  });
-  </script>
+        Back.addEventListener("click", function() {
+            // Redirect to "/Assets/Staff_Dashboard/Dashboard.html" directly
+            window.location.href = "/Assets/Staff_Dashboard/Dashboard.html";
+        });
+    </script>
 
 </html>
 

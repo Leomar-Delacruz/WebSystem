@@ -199,16 +199,16 @@ $result = $conn->query($sqlSelect);
 </table>
 <a href="add_product.php" class="add-product-btn">Add Product</a>
 </body>
-<script>
+    <script>
       // This is Btn Back
 
-  var Back = document.getElementById("Back");
+        var Back = document.getElementById("Back");
 
-  Back.addEventListener("click", function() {
-    // Redirect to /Assets/Admin_Dashboard/Dashboard.html" directly
-    window.location.href = "/Assets/Admin_Dashboard/Dashboard.html";
-  });
-  </script>
+        Back.addEventListener("click", function() {
+            // Redirect to "/Assets/Staff_Dashboard/Dashboard.html" directly
+            window.location.href = "/Assets/Staff_Dashboard/Dashboard.html";
+        });
+    </script>
 </html>
 
 <?php
