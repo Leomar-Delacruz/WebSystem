@@ -43,6 +43,7 @@ $result = $conn->query($sqlSelect);
         th, td {
             padding: 12px;
             text-align: center;
+            color: #343a40;
         }
 
         th {
