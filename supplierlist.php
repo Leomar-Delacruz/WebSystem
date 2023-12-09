@@ -55,10 +55,32 @@ $result = $conn->query($sqlSelect);
             text-decoration: none;
             border-radius: 5px;
         }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+
+            box-shadow: 2px 5px 4px #ddd;
+            
+            /* outline: 1px solid black; */
+        }
+
+        nav p {
+            margin-right: 28vw;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
-    <h2>Supplier Information</h2>
+
+        
+    <nav>
+        <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
+        <p class="display-6">Supplier Information</p>
+    </nav>
 
     <!-- Display the table of suppliers -->
     <table>
