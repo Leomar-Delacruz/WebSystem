@@ -5,16 +5,16 @@
   }
 
   function redirectToproducts() {
-    window.location.href = '/product.php'; // Todo actual file path
+    window.location.href = '/Assets/Staff_Dashboard/product.php'; // Todo actual file path
   }
 
 
   function redirectviewtransacrtion() {
-      window.location.href = '/transaction.php'; // Todo actual file path
+      window.location.href = '/Assets/Staff_Dashboard/transaction.php'; // Todo actual file path
     }
 
   function redirectTosuppliers() {
-    window.location.href = '/supplierlist.php'; // Todo actual file path
+    window.location.href = '/Assets/Staff_Dashboard/supplierlist.php'; // Todo actual file path
   }
 
 
