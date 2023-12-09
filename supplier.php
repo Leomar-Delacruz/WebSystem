@@ -104,7 +104,7 @@ $result = $conn->query($sqlSelect);
 <body>
 
     <nav>
-    <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
+    <a href="supplierlist.php" class="btn btn-success btn-lg">Back</a>
     <p class="display-6">Add Supplier</p>
     </nav>
 
