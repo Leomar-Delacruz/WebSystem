@@ -32,6 +32,7 @@ $result = $conn->query($sqlSelect);
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
+            margin-top: 10vh;
         }
 
         table, th, td {
