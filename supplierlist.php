@@ -84,7 +84,7 @@ $result = $conn->query($sqlSelect);
 
         
     <nav>
-    <button type="button" class="btn btn-success" id="Back">
+    <button type="button" class="btn btn-success btn-lg" id="Back">
         Back</button>
         <p class="display-6">Supplier Information</p>
     </nav>
