@@ -110,18 +110,19 @@ $result = $conn->query($sqlSelect);
 
     <div class="container">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <h2>Add Supplier</h2>
+      
+        <div></div>
 
-        <label for="supplierName">Supplier Name:</label>
+        <label for="supplierName" class="lead">Supplier Name:</label>
         <input type="text" name="supplierName" required>
 
-        <label for="contactNumber">Contact Number:</label>
+        <label for="contactNumber" class="lead">Contact Number:</label>
         <input type="text" name="contactNumber" required>
 
-        <label for="email">Email:</label>
+        <label for="email" class="lead">Email:</label>
         <input type="email" name="email" required>
 
-        <label for="address">Address:</label>
+        <label for="address" class="lead">Address:</label>
         <input type="text" name="address" required>
 
         <input type="submit" value="Add Supplier" class="btn btn-success">
