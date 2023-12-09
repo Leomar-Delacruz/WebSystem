@@ -37,7 +37,7 @@ $result = $conn->query($sqlSelect);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+
     <title>Add Supplier</title>
     <style>
         body {
@@ -124,8 +124,7 @@ $result = $conn->query($sqlSelect);
         <label for="address">Address:</label>
         <input type="text" name="address" required>
 
-        <input type="submit" value="Add Supplier">
-        <a href="supplierlist.php">Back</a>
+        <input type="submit" value="Add Supplier" class="btn btn-success">
     </form>
   </div>
 
