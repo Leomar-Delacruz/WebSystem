@@ -126,14 +126,15 @@ $result = $conn->query($sqlSelect);
 </body>
 
 <script>
-    // This is Btn back
-    var Back = document.getElementById("Back");
+      // This is Btn Back
 
-    Back.addEventListener("click", function() {
-        // Go back to the previous page
-        window.history.back();
-    });
-</script>
+  var Back = document.getElementById("Back");
+
+  Back.addEventListener("click", function() {
+    // Redirect to /Assets/Admin_Dashboard/Dashboard.html" directly
+    window.location.href = "/Assets/Admin_Dashboard/Dashboard.html";
+  });
+  </script>
 
 </html>
 

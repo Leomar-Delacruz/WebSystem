@@ -66,12 +66,12 @@ $usersign = $_SESSION['usersign'];
 </body>
   <!-- Connection -->
   <script>
-      // This is Btn Logout 
+      // This is Btn Back
 
   var Back = document.getElementById("Back");
 
   Back.addEventListener("click", function() {
-    // Redirect to "/User-Profile/userProfile.php" directly
+    // Redirect to /Assets/Admin_Dashboard/Dashboard.html" directly
     window.location.href = "/Assets/Admin_Dashboard/Dashboard.html";
   });
   </script>
