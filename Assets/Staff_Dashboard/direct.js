@@ -14,7 +14,7 @@
     }
 
   function redirectTosuppliers() {
-    window.location.href = '/customer.html'; // Todo actual file path
+    window.location.href = '/supplierlist.php'; // Todo actual file path
   }
 
 
