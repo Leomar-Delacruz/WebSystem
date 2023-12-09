@@ -10,11 +10,11 @@
 
 
   function redirectviewtransacrtion() {
-      window.location.href = 'Assets/Admin_Dashboard/transaction.php'; // Todo actual file path
+      window.location.href = '/Assets/Admin_Dashboard/transaction.php'; // Todo actual file path
     }
 
   function redirectTosuppliers() {
-    window.location.href = '/supplierlist.php'; // Todo actual file path
+    window.location.href = '/Assets/Admin_Dashboard/supplierlist.php'; // Todo actual file path
   }
 
 
