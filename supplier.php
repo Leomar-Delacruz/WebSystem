@@ -91,28 +91,13 @@ $result = $conn->query($sqlSelect);
             text-decoration: none;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100vw;
-            height: 10vh;
-
-            box-shadow: 2px 5px 4px #ddd;
-
-            /* outline: 1px solid black; */
-            }
-
-            nav p {
-            margin-right: 28vw;
-        }
     </style>
 </head>
 <body>
 
     <nav>
     <a href="transaction.php" class="btn btn-success btn-lg">Back</a>
-    <p class="display-6">Add New Transaction</p>
+    <p class="display-6">Add Supplier</p>
     </nav>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
