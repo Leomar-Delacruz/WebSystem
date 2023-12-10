@@ -53,10 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <form id="loginForm" method="post" class="form" onsubmit="login()">
 
-      <p class="heading display-5b">Login</p>
+      <p class="heading display-4 ">Login</p>
       <input class="input display-7" type="text" id="username" name="username" placeholder="Username" required>
       <input class="input display-7" type="password" id="password" name="password" placeholder="Password" required>
-      <a href="#" class="a-forgot lead text-primary">Forgot password?</a>
+      <!-- <a href="#" class="a-forgot lead text-primary">Forgot password?</a> -->
       <!-- <button type="button" class="btn text-white" onclick="login()">Login </button> -->
       <input type="submit" value="Signin" class="btn text-white">
 
